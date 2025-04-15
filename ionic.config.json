@@ -1,0 +1,7 @@
+{
+  "name": "TestXPE",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
