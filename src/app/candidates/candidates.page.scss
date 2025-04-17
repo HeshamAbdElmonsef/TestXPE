@@ -69,15 +69,14 @@ pagination-controls {
     }
   }
   .logout-button {
-    --background: #36f469;           /* لون الخلفية الأحمر */
-    --background-activated: #d32f2f;   /* لون الخلفية عند التفاعل */
+    --background: #36f469;          
+    --background-activated: #d32f2f; 
     --background-focused: #d32f2f;
-    --border-radius: 25px;            /* تدوير الزوايا */
+    --border-radius: 25px;          
     --padding-start: 1rem;
     --padding-end: 1rem;
     font-size: 16px;
     font-weight: bold;
-    /* تقدر تضيف المزيد من التخصيصات هنا */
   }
   
 }

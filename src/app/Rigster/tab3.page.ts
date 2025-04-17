@@ -53,7 +53,7 @@ export class Tab3Page implements OnInit{
         this.navCtrl.navigateForward('/Login');
       },
       async error => {
-        console.error('Registration error:', error); // هنا هتلاقي سبب الرفض
+        console.error('Registration error:', error);
   
         let errorMessage = 'Registration failed.';
         if (error.error && error.error.errors) {
@@ -72,14 +72,12 @@ export class Tab3Page implements OnInit{
   }
 
   cancel() {
-    // إعادة تعيين الحقول إذا رغب المستخدم في إلغاء العملية
     this.fullName = '';
     this.email = '';
     this.password = '';
     this.confirmPassword = '';
   }
   goBack() {
-    // Navigate to the previous page
     this.navCtrl.navigateForward('/home');
   }
 

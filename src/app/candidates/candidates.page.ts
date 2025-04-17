@@ -21,8 +21,7 @@ export class CandidatesPage implements OnInit {
   constructor(private candidatesService: CandidatesService,private authService: AuthService,private router: Router) {}
 
   ngOnInit(): void {
-    // يمكنك استدعاء loadCandidates هنا إذا كنت تريد تحميل البيانات عند بدء الصفحة
-    // this.loadCandidates();
+   
   }
   onFileSelected(event: any): void {
     if (event.target.files.length > 0) {
