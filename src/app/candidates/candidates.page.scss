@@ -1,0 +1,83 @@
+.upload-card,
+.candidates-card {
+  margin-bottom: 20px;
+}
+
+.custom-file-input {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.message-text {
+  font-size: 14px;
+  color: green;
+  margin-top: 8px;
+  text-align: center;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+.candidates-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+  font-size: 14px;
+
+  th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+    white-space: nowrap;
+  }
+
+  th {
+    background-color: #f4f4f4;
+    font-weight: 600;
+  }
+
+  tr:hover {
+    background-color: #f9f9f9;
+  }
+}
+
+pagination-controls {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.spinner-center {
+  display: block;
+  margin: 20px auto;
+}
+
+/* Responsive Table for Mobile */
+@media (max-width: 768px) {
+  .candidates-table {
+    font-size: 12px;
+
+    th, td {
+      padding: 6px;
+    }
+
+    th:nth-child(4),
+    td:nth-child(4) {
+      display: none; // hide email on small screen if needed
+    }
+  }
+  .logout-button {
+    --background: #36f469;           /* لون الخلفية الأحمر */
+    --background-activated: #d32f2f;   /* لون الخلفية عند التفاعل */
+    --background-focused: #d32f2f;
+    --border-radius: 25px;            /* تدوير الزوايا */
+    --padding-start: 1rem;
+    --padding-end: 1rem;
+    font-size: 16px;
+    font-weight: bold;
+    /* تقدر تضيف المزيد من التخصيصات هنا */
+  }
+  
+}

@@ -1,3 +1,3 @@
 export const environment = {
-  production: true
+  apiUrl:'http://myxpetask.runasp.net/api'
 };

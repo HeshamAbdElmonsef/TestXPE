@@ -1,0 +1,45 @@
+.language-select {
+  position: absolute;
+  top: 10px; // المسافة من الأعلى
+  right: 10px; // المسافة من اليمين
+  width: auto; // عرض مناسب
+  
+  z-index: 1000; // تأكد من أن العنصر فوق العناصر الأخرى
+  align-items: center;
+
+  justify-content: center;
+
+}
+.container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .custom-button {
+    margin: 10px 0;
+    --border-radius: 25px;
+    --padding-top: 20px;
+    --padding-bottom: 20px;
+    font-weight: bold;
+  
+    ion-icon {
+      margin-right: 8px;
+    }
+  }
+  
+  .login-btn {
+    --background: var(--ion-color-primary);
+    --color: white;
+  }
+  
+  .register-btn {
+    --border-color: var(--ion-color-secondary);
+    --color: var(--ion-color-secondary);
+    
+    &:hover {
+      --background: var(--ion-color-secondary-tint);
+      --color: white;
+    }
+  }

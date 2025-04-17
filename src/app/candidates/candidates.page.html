@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Candidates</ion-title>
+    <ion-buttons slot="end">
+      <!-- زر تسجيل الخروج -->
+      <ion-button color="danger" (click)="logout()">Logout</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <!-- باقي المحتوى كما هو -->
+  <ion-card class="upload-card">
+    <ion-card-header>
+      <ion-card-title>Upload File</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <input type="file" (change)="onFileSelected($event)" class="custom-file-input" />
+      <ion-button expand="block" color="primary" (click)="onUpload()">Upload</ion-button>
+      <p class="message-text">{{ uploadMessage }}</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="candidates-card">
+    <ion-card-header>
+      <ion-card-title>Candidate List</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-button expand="block" color="secondary" (click)="loadCandidates()">Load Candidates</ion-button>
+
+      <div class="table-responsive" *ngIf="candidates.length > 0">
+        <table class="candidates-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Nickname</th>
+              <th>Email</th>
+              <th>Experience</th>
+              <th>Skills</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let candidate of candidates | paginate: { itemsPerPage: 5, currentPage: page }">
+              <td>{{ candidate.id }}</td>
+              <td>{{ candidate.name }}</td>
+              <td>{{ candidate.nickname }}</td>
+              <td>{{ candidate.email }}</td>
+              <td>{{ candidate.yearsOfExperience }}</td>
+              <td>{{ candidate.maxNumSkills }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <pagination-controls (pageChange)="page = $event"></pagination-controls>
+      <ion-spinner *ngIf="loading" name="crescent" color="primary" class="spinner-center"></ion-spinner>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

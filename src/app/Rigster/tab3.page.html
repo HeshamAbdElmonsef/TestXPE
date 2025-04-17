@@ -1,0 +1,47 @@
+<ion-content class="ion-padding register-content">
+  <div class="register-card">
+    <!-- Header with Back Button -->
+    <div class="card-header">
+      <ion-button fill="clear" size="small" class="back-btn" (click)="goBack()">
+        <ion-icon slot="start" name="arrow-back-outline"></ion-icon>
+        Back
+      </ion-button>
+    </div>
+
+    <!-- Page Title -->
+    <h2 class="register-title">Create Account</h2>
+
+    <!-- Registration Form -->
+    <form (ngSubmit)="register()">
+      <ion-item class="custom-item">
+        <ion-label position="floating">First Name</ion-label>
+        <ion-input type="text" [(ngModel)]="fullName" name="fullName" required></ion-input>
+      </ion-item>
+
+      <ion-item class="custom-item">
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="email" [(ngModel)]="email" name="email" required></ion-input>
+      </ion-item>
+
+      <ion-item class="custom-item">
+        <ion-label position="floating">Password</ion-label>
+        <ion-input type="password" [(ngModel)]="password" name="password" required></ion-input>
+      </ion-item>
+
+      <ion-item class="custom-item">
+        <ion-label position="floating">Confirm Password</ion-label>
+        <ion-input type="password" [(ngModel)]="confirmPassword" name="confirmPassword" required></ion-input>
+      </ion-item>
+
+      <!-- Register Button -->
+      <ion-button expand="block" type="submit" class="register-btn">
+        Register
+      </ion-button>
+
+      <!-- Cancel Button -->
+      <ion-button expand="block" fill="outline" type="button" class="cancel-btn" (click)="cancel()">
+        Cancel
+      </ion-button>
+    </form>
+  </div>
+</ion-content>
